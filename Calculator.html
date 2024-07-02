@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" type="text/css" href="1233.css">
+    <title>Calculator</title>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Simple Calculator</h1>
+        <form class="calculator" name="page">
+            <input type="text" name="fnum" placeholder="First number" class="input-field"><br>
+            <input type="text" name="secnum" placeholder="Second number" class="input-field"><br>
+            <div class="buttons">
+                <input type="button" value="Add (+)" onclick="add()" class="button">
+                <input type="button" value="Subtract (-)" onclick="subtract()" class="button">
+                <input type="button" value="Multiply (*)" onclick="multiply()" class="button">
+                <input type="button" value="Divide (/)" onclick="divide()" class="button">
+                <input type="button" value="Modulus (%)" onclick="modulo()" class="button">
+                <input type="button" value="Power (^)" onclick="power()" class="button">
+            </div>
+            <input type="button" value="Clear" onclick="clearFields()" class="clear-button"><br>
+            <input type="text" name="result" placeholder="Answer..." class="result-field">
+        </form>
+    </div>
+
+    <script type="text/javascript">
+        function add() {
+            const fnum = parseFloat(page.fnum.value);
+            const secnum = parseFloat(page.secnum.value);
+            const result = fnum + secnum;
+            page.result.value = result;
+        }
+
+        function subtract() {
+            const fnum = parseFloat(page.fnum.value);
+            const secnum = parseFloat(page.secnum.value);
+            const result = fnum - secnum;
+            page.result.value = result;
+        }
+
+        function multiply() {
+            const fnum = parseFloat(page.fnum.value);
+            const secnum = parseFloat(page.secnum.value);
+            const result = fnum * secnum;
+            page.result.value = result;
+        }
+
+        function divide() {
+            const fnum = parseFloat(page.fnum.value);
+            const secnum = parseFloat(page.secnum.value);
+            const result = fnum / secnum;
+            page.result.value = result;
+        }
+
+        function modulo() {
+            const fnum = parseFloat(page.fnum.value);
+            const secnum = parseFloat(page.secnum.value);
+            const result = fnum % secnum;
+            page.result.value = result;
+        }
+
+        function power() {
+            const fnum = parseFloat(page.fnum.value);
+            const secnum = parseFloat(page.secnum.value);
+            const result = Math.pow(fnum, secnum);
+            page.result.value = result;
+        }
+
+        function clearFields() {
+            page.fnum.value = '';
+            page.secnum.value = '';
+            page.result.value = '';
+        }
+    </script>
+</body>
+
+</html>
